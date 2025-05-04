@@ -2,10 +2,9 @@ import {
   users, 
   type User, 
   type RegisterUser 
-} from "database/schema";
+} from "@shared/schema";
 import createMemoryStore from "memorystore";
 import session from "express-session";
-import { Store } from "express-session";
 
 // Create memory store for sessions
 const MemoryStore = createMemoryStore(session);
@@ -16,14 +15,14 @@ export interface IStorage {
   getUserByEmail(email: string): Promise<User | undefined>;
   createUser(user: RegisterUser): Promise<User>;
   updateUserPoints(userId: number, points: number): Promise<User>;
-  sessionStore: Store;
+  sessionStore: session.SessionStore;
 }
 
 // In-memory implementation
 export class MemStorage implements IStorage {
   private users: Map<number, User>;
   currentId: number;
-  sessionStore: Store;
+  sessionStore: session.SessionStore;
 
   constructor() {
     this.users = new Map();

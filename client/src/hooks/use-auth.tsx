@@ -4,7 +4,7 @@ import {
   useMutation,
   UseMutationResult,
 } from "@tanstack/react-query";
-import { User, RegisterUser } from "database/schema";
+import { User, RegisterUser } from "@shared/schema";
 import { queryClient } from "../lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 
@@ -111,7 +111,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         id: Date.now(),
         ...userData,
         points: 1000,
-        createdAt: new Date(),
+        createdAt: new Date().toISOString(),
       };
       
       users[userData.email] = newUser;

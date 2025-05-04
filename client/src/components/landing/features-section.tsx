@@ -1,19 +1,23 @@
-import { DollarSign, TrendingUp, Award } from "lucide-react";
+import { 
+  LineChart,
+  CreditCard,
+  Gift
+} from "lucide-react";
 
 export default function FeaturesSection() {
   const features = [
     {
-      icon: <DollarSign className="w-6 h-6 text-primary" />,
-      title: "Track Spending",
+      icon: <LineChart className="w-6 h-6 text-primary" />,
+      title: "Track Payments",
       description: "Monitor your spending habits, set budgets, and receive notifications when bills are due. Stay on top of your finances with ease."
     },
     {
-      icon: <TrendingUp className="w-6 h-6 text-primary" />,
+      icon: <CreditCard className="w-6 h-6 text-primary" />,
       title: "Build Credit",
       description: "Establish your credit history with our secured card option. Learn how credit works and improve your score over time."
     },
     {
-      icon: <Award className="w-6 h-6 text-primary" />,
+      icon: <Gift className="w-6 h-6 text-primary" />,
       title: "Earn Rewards",
       description: "Get points for smart financial decisions and redeem them for products, gift cards, and more in our rewards shop."
     }
