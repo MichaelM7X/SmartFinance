@@ -14,19 +14,7 @@ export default function HeroSection() {
     <section className="bg-gradient-to-b from-secondary/30 to-white py-20 md:py-28">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 flex justify-center mb-10 md:mb-0 order-2 md:order-1">
-            <div className="relative">
-              <div className="absolute -top-4 -left-4 w-full h-full bg-primary/10 rounded-xl"></div>
-              <img 
-                src="./attached_assets/hero-image.jpeg" 
-                alt="College students using SmartFin app" 
-                className="rounded-xl shadow-lg max-w-full h-auto relative" 
-                width="600" 
-                height="400"
-              />
-            </div>
-          </div>
-          <div className="md:w-1/2 order-1 md:order-2">
+          <div className="md:w-1/2 mb-10 md:mb-0">
             <span className="bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-bold inline-block mb-6">
               FOR COLLEGE STUDENTS
             </span>
@@ -74,6 +62,18 @@ export default function HeroSection() {
                 </div>
                 <p className="text-sm text-gray-700">Earn Rewards</p>
               </div>
+            </div>
+          </div>
+          <div className="md:w-1/2 flex justify-center">
+            <div className="relative">
+              <div className="absolute -top-4 -left-4 w-full h-full bg-primary/10 rounded-xl"></div>
+              <img 
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                alt="College students using SmartFin app" 
+                className="rounded-xl shadow-lg max-w-full h-auto relative" 
+                width="600" 
+                height="400"
+              />
             </div>
           </div>
         </div>
