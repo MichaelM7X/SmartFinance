@@ -111,7 +111,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         id: Date.now(),
         ...userData,
         points: 1000,
-        createdAt: new Date().toISOString(),
+        createdAt: new Date(),
       };
       
       users[userData.email] = newUser;
