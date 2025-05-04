@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { useAuth } from "@/hooks/use-auth";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Menu, X, Gift } from "lucide-react";
 
 export default function Navbar() {
   const [location] = useLocation();
@@ -41,7 +42,10 @@ export default function Navbar() {
               <Link href="/" className="hover:text-primary transition">Home</Link>
             )}
             {user && (
-              <Link href="/rewards" className="hover:text-primary transition">Rewards</Link>
+              <Link href="/rewards" className="flex items-center font-medium text-primary transition">
+                <Gift className="w-4 h-4 mr-1" />
+                Rewards Shop
+              </Link>
             )}
           </div>
           
@@ -51,14 +55,15 @@ export default function Navbar() {
               <div className="flex items-center space-x-4">
                 <div className="flex items-center space-x-2">
                   <span className="font-medium">{user.name}</span>
-                  <span className="bg-light px-3 py-1 rounded-full text-sm">
+                  <Badge className="bg-primary text-white px-3 py-1 font-bold">
                     {user.points} points
-                  </span>
+                  </Badge>
                 </div>
                 <Button 
                   variant="destructive" 
                   size="sm"
                   onClick={handleLogout}
+                  className="rounded-full"
                 >
                   Logout
                 </Button>
@@ -141,25 +146,27 @@ export default function Navbar() {
               {user && (
                 <Link 
                   href="/rewards" 
-                  className="hover:text-primary transition py-2"
+                  className="flex items-center font-medium text-primary py-2"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Rewards
+                  <Gift className="w-4 h-4 mr-1" />
+                  Rewards Shop
                 </Link>
               )}
             </div>
             <div className="flex flex-col space-y-2 mt-4 pt-4 border-t border-gray-200">
               {user ? (
                 <>
-                  <div className="flex items-center space-x-2 py-2">
+                  <div className="flex items-center justify-between py-2">
                     <span className="font-medium">{user.name}</span>
-                    <span className="bg-light px-3 py-1 rounded-full text-sm">
+                    <Badge className="bg-primary text-white px-3 py-1 font-bold">
                       {user.points} points
-                    </span>
+                    </Badge>
                   </div>
                   <Button 
                     variant="destructive"
                     onClick={handleLogout}
+                    className="rounded-full"
                   >
                     Logout
                   </Button>
