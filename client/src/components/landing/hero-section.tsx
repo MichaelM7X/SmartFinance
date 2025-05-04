@@ -18,7 +18,7 @@ export default function HeroSection() {
             <div className="relative">
               <div className="absolute -top-4 -left-4 w-full h-full bg-primary/10 rounded-xl"></div>
               <img 
-                src="/attached_assets/hero-image.jpeg" 
+                src="./attached_assets/hero-image.jpeg" 
                 alt="College students using SmartFin app" 
                 className="rounded-xl shadow-lg max-w-full h-auto relative" 
                 width="600" 
