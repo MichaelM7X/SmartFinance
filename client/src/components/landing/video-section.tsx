@@ -19,7 +19,6 @@ export default function VideoSection() {
             <iframe 
               src="https://www.youtube.com/embed/mLMHAoytQBM" 
               title="SmartFin Demo Video"
-              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
               allowFullScreen
               className="absolute top-0 left-0 w-full h-full"
