@@ -5,7 +5,7 @@ export default function AboutSection() {
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0">
             <img 
-              src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+              src="/attached_assets/about-us.jpeg" 
               alt="Students collaborating" 
               className="rounded-xl shadow-lg max-w-full h-auto" 
               width="600" 

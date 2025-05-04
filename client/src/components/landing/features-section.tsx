@@ -38,12 +38,12 @@ export default function FeaturesSection() {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {features.map((feature, index) => (
-            <div key={index} className="bg-secondary/20 rounded-xl p-8 shadow-md transition hover:shadow-lg border border-secondary/10">
+            <div key={index} className="bg-primary rounded-xl p-8 shadow-md transition hover:shadow-lg text-white">
               <div className="bg-white p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 shadow-sm">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-              <p className="text-gray-700">{feature.description}</p>
+              <h3 className="text-xl font-bold mb-3 text-white">{feature.title}</h3>
+              <p className="text-white/90">{feature.description}</p>
             </div>
           ))}
         </div>
