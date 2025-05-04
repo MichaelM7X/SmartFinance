@@ -2,7 +2,7 @@ import {
   users, 
   type User, 
   type RegisterUser 
-} from "@shared/schema";
+} from "database/schema";
 import createMemoryStore from "memorystore";
 import session from "express-session";
 
