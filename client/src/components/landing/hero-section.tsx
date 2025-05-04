@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import { ArrowRight, DollarSign, TrendingUp, Award } from "lucide-react";
 
 export default function HeroSection() {
   const scrollToContact = () => {
@@ -10,42 +11,70 @@ export default function HeroSection() {
   };
   
   return (
-    <section className="bg-light py-16 md:py-24">
+    <section className="bg-gradient-to-b from-secondary/30 to-white py-20 md:py-28">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
-              Smarter Finances for Students
+            <span className="bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-bold inline-block mb-6">
+              FOR COLLEGE STUDENTS
+            </span>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+              Smarter Finances<br />for a Brighter Future
             </h1>
             <p className="text-lg md:text-xl mb-8 text-gray-700">
               Take control of your money, build credit, and boost your financial literacy while earning rewards.
             </p>
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
               <Button 
                 size="lg" 
-                className="bg-primary hover:bg-primary/90 text-white px-8 rounded-full"
+                className="bg-primary hover:bg-primary/90 text-white px-8 rounded-full flex items-center"
                 onClick={scrollToContact}
               >
                 Join the Waitlist
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white px-8 rounded-full"
+                className="border-2 border-accent text-accent hover:bg-accent hover:text-white px-8 rounded-full"
                 onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Learn More
               </Button>
             </div>
+            
+            <div className="grid grid-cols-3 gap-4 text-center">
+              <div>
+                <div className="bg-white rounded-full h-12 w-12 flex items-center justify-center mx-auto mb-2 shadow-sm border border-gray-200">
+                  <DollarSign className="h-5 w-5 text-primary" />
+                </div>
+                <p className="text-sm text-gray-700">Track Spending</p>
+              </div>
+              <div>
+                <div className="bg-white rounded-full h-12 w-12 flex items-center justify-center mx-auto mb-2 shadow-sm border border-gray-200">
+                  <TrendingUp className="h-5 w-5 text-primary" />
+                </div>
+                <p className="text-sm text-gray-700">Build Credit</p>
+              </div>
+              <div>
+                <div className="bg-white rounded-full h-12 w-12 flex items-center justify-center mx-auto mb-2 shadow-sm border border-gray-200">
+                  <Award className="h-5 w-5 text-primary" />
+                </div>
+                <p className="text-sm text-gray-700">Earn Rewards</p>
+              </div>
+            </div>
           </div>
           <div className="md:w-1/2 flex justify-center">
-            <img 
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
-              alt="College students using SmartFin app" 
-              className="rounded-xl shadow-lg max-w-full h-auto" 
-              width="600" 
-              height="400"
-            />
+            <div className="relative">
+              <div className="absolute -top-4 -left-4 w-full h-full bg-primary/10 rounded-xl"></div>
+              <img 
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                alt="College students using SmartFin app" 
+                className="rounded-xl shadow-lg max-w-full h-auto relative" 
+                width="600" 
+                height="400"
+              />
+            </div>
           </div>
         </div>
       </div>
