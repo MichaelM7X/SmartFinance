@@ -68,9 +68,9 @@ export default function HeroSection() {
             <div className="relative">
               <div className="absolute -top-4 -left-4 w-full h-full bg-primary/10 rounded-xl"></div>
               <img 
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
-                alt="College students using SmartFin app" 
-                className="rounded-xl shadow-lg max-w-full h-auto relative" 
+                src="https://us.images.westend61.de/0001485010pw/smiling-young-blond-female-student-using-smart-phone-at-university-TCEF01375.jpg" 
+                alt="College student using SmartFin app" 
+                className="rounded-xl shadow-lg max-w-full h-auto relative bg-blend-darken" 
                 width="600" 
                 height="400"
               />

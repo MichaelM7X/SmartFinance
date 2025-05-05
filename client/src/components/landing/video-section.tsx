@@ -5,12 +5,15 @@ export default function VideoSection() {
     <section id="demo" className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">See SmartFin in Action</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            See SmartFin in Action
+          </h2>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-            Watch how our app helps students take control of their financial future.
+            Watch how our app helps students take control of their financial
+            future.
           </p>
         </div>
-        
+
         <div className="max-w-4xl mx-auto bg-light rounded-xl overflow-hidden shadow-lg">
           <div className="aspect-w-16 aspect-h-9 relative pt-[56.25%]">
             <div className="absolute top-0 left-0 w-full h-full bg-gray-300 flex items-center justify-center">
@@ -19,7 +22,15 @@ export default function VideoSection() {
                   <Play className="h-12 w-12 text-primary" />
                 </div>
                 <p className="text-lg font-medium">SmartFin Demo Video</p>
-                <p className="text-sm text-gray-600">(Video placeholder - actual embed would go here)</p>
+                <iframe
+                  src="https://www.youtube.com/embed/mLMHAoytQBM"
+                  title="SmartFin Demo Video"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute top-0 left-0 w-full h-full"
+                  style={{ height: "100%" }}
+                ></iframe>
               </div>
             </div>
           </div>
