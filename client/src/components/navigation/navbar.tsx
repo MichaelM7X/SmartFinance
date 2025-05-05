@@ -145,7 +145,7 @@ export default function Navbar() {
               )}
               {user && (
                 <Link 
-                  href="/rewards" 
+                  href="/shop" 
                   className="flex items-center font-medium text-primary py-2"
                   onClick={() => setMobileMenuOpen(false)}
                 >
