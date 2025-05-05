@@ -6,13 +6,14 @@ import ProductCard from "@/components/products/product-card";
 import ProductModal from "@/components/products/product-modal";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Gift, TrendingUp, Shirt, Smartphone, CreditCard } from "lucide-react";
+import { Gift, TrendingUp, Shirt, Smartphone, CreditCard, ShoppingCart } from "lucide-react";
 import { getProducts, Product, ProductCategory } from "@/utils/products";
 
 export default function RewardsShop() {
   const { user, updatePoints } = useAuth();
   const [activeCategory, setActiveCategory] = useState<ProductCategory>("trending");
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [cartItems, setCartItems] = useState<Product[]>([]);
   
   const products = getProducts();
   
@@ -40,6 +41,10 @@ export default function RewardsShop() {
     
     // Update user points
     updatePoints(user.points - product.points);
+    
+    // Add item to cart
+    setCartItems([...cartItems, product]);
+    
     return true;
   };
   
@@ -57,7 +62,18 @@ export default function RewardsShop() {
               </p>
             </div>
             
-            <div className="mt-6 md:mt-0">
+            <div className="mt-6 md:mt-0 flex items-center gap-4">
+              {/* Shopping Cart */}
+              <div className="bg-white rounded-xl p-4 text-center shadow-lg relative">
+                <img src={cartIconPath} alt="Shopping Cart" className="w-10 h-10 mx-auto" />
+                {cartItems.length > 0 && (
+                  <div className="absolute -top-2 -right-2 bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">
+                    {cartItems.length}
+                  </div>
+                )}
+              </div>
+              
+              {/* Balance */}
               <div className="bg-white rounded-xl p-4 text-center shadow-lg">
                 <div className="text-accent text-sm font-medium mb-1">YOUR BALANCE</div>
                 <div className="flex items-center justify-center gap-2">
