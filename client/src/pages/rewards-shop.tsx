@@ -65,7 +65,11 @@ export default function RewardsShop() {
             <div className="mt-6 md:mt-0 flex items-center gap-4">
               {/* Shopping Cart */}
               <div className="bg-white rounded-xl p-4 text-center shadow-lg relative">
-                <img src={cartIconPath} alt="Shopping Cart" className="w-10 h-10 mx-auto" />
+                <img 
+                  src="https://static.vecteezy.com/system/resources/previews/004/999/463/non_2x/shopping-cart-icon-illustration-free-vector.jpg" 
+                  alt="Shopping Cart" 
+                  className="w-10 h-10 mx-auto"
+                />
                 {cartItems.length > 0 && (
                   <div className="absolute -top-2 -right-2 bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">
                     {cartItems.length}
