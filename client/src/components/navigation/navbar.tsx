@@ -42,7 +42,7 @@ export default function Navbar() {
               <Link href="/" className="hover:text-primary transition">Home</Link>
             )}
             {user && (
-              <Link href="/rewards" className="flex items-center font-medium text-primary transition">
+              <Link href="/shop" className="flex items-center font-medium text-primary transition">
                 <Gift className="w-4 h-4 mr-1" />
                 Rewards Shop
               </Link>
